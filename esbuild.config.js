@@ -16,6 +16,7 @@ esbuild
 			js: banner,
 		},
 		bundle: true,
+		entryPoints: ["src/main.ts"],
 		external: [
 			"obsidian",
 			"electron",
@@ -41,5 +42,6 @@ esbuild
 		define: {
 			"process.env.NODE_ENV": prod ? '"production"' : '"development"',
 		},
+		outfile: 'main.js',
 	})
 	.catch(() => process.exit(1));
