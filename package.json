@@ -4,7 +4,7 @@
 	"description": "Lets you browse the web within Obsidian.",
 	"main": "main.js",
 	"scripts": {
-		"dev": "node esbuild.config.mjs",
+		"dev": "obsidian-plugin dev -e esbuild.config.js src/main.ts",
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
 		"version": "node version-bump.mjs && git add manifest.json versions.json"
 	},
@@ -19,6 +19,7 @@
 		"electron": "^21.0.1",
 		"esbuild": "0.14.47",
 		"obsidian": "latest",
+		"obsidian-plugin-cli": "^0.8.1",
 		"tslib": "2.4.0",
 		"typescript": "4.7.4"
 	}

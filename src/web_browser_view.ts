@@ -1,6 +1,6 @@
 import { FileView, ItemView, TFile, ViewStateResult } from "obsidian";
 import { HeaderBar } from "./header_bar";
-import { remote } from "electron";
+const remote = require('electron').remote;
 
 export const WEB_BROWSER_VIEW_ID = "web-browser-view";
 
